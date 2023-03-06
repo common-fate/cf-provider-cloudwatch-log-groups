@@ -2,7 +2,6 @@ import json
 import boto3
 import click
 from mypy_boto3_iam.client import IAMClient
-from mypy_boto3_sts.client import STSClient
 from pathlib import Path
 from os import path
 
@@ -27,7 +26,7 @@ def create_role(account_id, role):
     }
     trust_relationship_str = json.dumps(trust_relationship)
 
-    policy_file = path.join("policies", role + ".json")
+    policy_file = path.join("roles", role + ".json")
 
     role_name = role_base_name + "-" + role
 
