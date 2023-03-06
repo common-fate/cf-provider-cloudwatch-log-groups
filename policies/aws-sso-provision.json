@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "sso:CreateAccountAssignment",
+        "sso:DeleteAccountAssignment",
+        "sso:CreatePermissionSet",
+        "sso:DeletePermissionSet",
+        "identitystore:ListUsers",
+        "sso:DescribeAccountAssignmentCreationStatus",
+        "sso:DescribeAccountAssignmentDeletionStatus"
+      ],
+      "Resource": ["*"]
+    }
+  ]
+}

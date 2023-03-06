@@ -1,0 +1,4 @@
+name = "cloudwatch-log-groups"
+publisher = "common-fate"
+version = "v0.1.0"
+language = "python3.9"
