@@ -263,8 +263,10 @@ def next_token(page: typing.Optional[str]) -> dict:
     return {"NextToken": page}
 
 
-# got implementation from this stackoverflow https://stackoverflow.com/questions/44171849/aws-boto3-assumerole-example-which-includes-role-usage
 def get_boto3_session(role_arn=None):
+    """
+    Returns a boto3 session which assumes the role specified with `role_arn`.
+    """
     session = boto3.Session()
     if not role_arn:
         return session
