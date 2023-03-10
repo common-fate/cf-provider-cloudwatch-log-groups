@@ -10,7 +10,9 @@
         "sso:DeletePermissionSet",
         "identitystore:ListUsers",
         "sso:DescribeAccountAssignmentCreationStatus",
-        "sso:DescribeAccountAssignmentDeletionStatus"
+        "sso:DescribeAccountAssignmentDeletionStatus",
+        "sso:PutInlinePolicyToPermissionSet",
+        "sso:DeleteInlinePolicyFromPermissionSet"
       ],
       "Resource": ["*"]
     }

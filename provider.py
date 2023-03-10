@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+import json
 import typing
 from commonfate_provider import (
     provider,
@@ -18,7 +19,8 @@ from botocore.credentials import (
 from pydantic import BaseModel
 from retrying import retry
 import structlog
-from .parse_arn import parse_arn
+from .parse_arn import parse_arn, ARN
+from urllib.parse import quote_plus
 
 log = structlog.get_logger()
 
@@ -61,15 +63,6 @@ class Provider(provider.Provider):
             role_arn=self.sso_role_arn.get()
         ).client("identitystore", region_name=self.sso_region.get())
 
-    def ensure_account_exists(self, accountId) -> bool:
-        try:
-            out = self.org_client.describe_account(AccountId=accountId)
-        except Exception as e:
-            print("failed to find account" + str(e))
-            return False
-
-        return True
-
     def get_user(self, subject) -> SSOUser:
         # try get user first by filtering username
         out = self.idstore_client.list_users(
@@ -90,14 +83,10 @@ class Provider(provider.Provider):
         next_token = ""
 
         while has_more:
-            try:
-                users = self.idstore_client.list_users(
-                    IdentityStoreId=self.sso_identity_store_id.get(),
-                    NextToken=next_token,
-                )
-            except:
-                print("an error occured getting list of users")
-                return None
+            users = self.idstore_client.list_users(
+                IdentityStoreId=self.sso_identity_store_id.get(),
+                NextToken=next_token,
+            )
 
             for user in users["Users"]:
                 for email in user["Emails"]:
@@ -136,7 +125,6 @@ def check_account_assignment_status(p: Provider, request_id):
     )
 
     if acc_assignment["AccountAssignmentCreationStatus"]["Status"] == "SUCCEEDED":
-        print("success")
         return acc_assignment
     else:
         if acc_assignment["AccountAssignmentCreationStatus"]["Status"] == "FAILED":
@@ -154,7 +142,6 @@ def check_account_deletion_status(p: Provider, request_id):
     )
 
     if acc_assignment["AccountAssignmentDeletionStatus"]["Status"] == "SUCCEEDED":
-        print("success")
         return acc_assignment
     else:
         if acc_assignment["AccountAssignmentDeletionStatus"]["Status"] == "FAILED":
@@ -187,6 +174,64 @@ def grant(
 
     log.info("created permission set", result=ps)
 
+    inline_policy = {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "logs:GetLogDelivery",
+                    "logs:GetLogEvents",
+                    "logs:GetLogGroupFields",
+                    "logs:GetLogRecord",
+                    "logs:GetQueryResults",
+                    "logs:StartQuery",
+                    "logs:StopQuery",
+                    "logs:TestMetricFilter",
+                    "logs:FilterLogEvents",
+                    "logs:DescribeSubscriptionFilters",
+                    "logs:ListTagsLogGroup",
+                    "logs:GetDataProtectionPolicy",
+                ],
+                "Resource": [f"{target.log_group}:*"],
+            },
+            # These permissions are not required to view log group data,
+            # but allowing users to view metadata about logs results in
+            # a far better console user experience.
+            #
+            # This allows for users to view metadata about log groups
+            # other than the one they have requested, and to view
+            # metric data. This provider does not consider these to be
+            # sensitive and in fact may be of assistance to a user who
+            # is using this provider to get access to logs when responding
+            # to an incident.
+            #
+            # In future we will introduce a configuration option allowing
+            # this policy statement to be disabled, so that metadata
+            # about other log groups and metrics cannot be viewed.
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "logs:DescribeLogGroups",
+                    "logs:DescribeLogStreams",
+                    "logs:DescribeMetricFilters",
+                    "cloudwatch:GetMetricData",
+                ],
+                "Resource": ["*"],
+            },
+        ],
+    }
+
+    log.info("provisioning inline policy to role", policy=inline_policy)
+
+    inline_policy_result = p.sso_client.put_inline_policy_to_permission_set(
+        InstanceArn=p.sso_instance_arn.get(),
+        PermissionSetArn=ps["PermissionSet"]["PermissionSetArn"],
+        InlinePolicy=json.dumps(inline_policy),
+    )
+
+    log.info("attached inline policy to permission set", result=inline_policy_result)
+
     # call aws to create the account assignment to the permissions set
     acc_assignment = p.sso_client.create_account_assignment(
         InstanceArn=p.sso_instance_arn.get(),
@@ -204,7 +249,8 @@ def grant(
         p, acc_assignment["AccountAssignmentCreationStatus"]["RequestId"]
     )
 
-    print(res)
+    log.info("checked account assignment", result=res)
+
     # log the success or failure of the grant
     if res["AccountAssignmentCreationStatus"]["Status"] != "SUCCEEDED":
         raise Exception(
@@ -216,7 +262,25 @@ def grant(
         permission_set_arn=ps["PermissionSet"]["PermissionSetArn"],
     )
 
-    return access.GrantResult(state=state)
+    url = log_group_url(log_group_arn=log_group_arn)
+
+    log.info(f"url: {url}")
+
+    access_instructions = f"""First, log in to your [AWS SSO URL](https://{p.sso_identity_store_id.get()}.awsapps.com/start).
+
+Account ID: {log_group_arn.account}
+Role: {request.id}
+
+Once logged in, use the link below to view logs for the log group:
+
+- [{target.log_group}]({url})
+"""
+
+    return access.GrantResult(state=state, access_instructions=access_instructions)
+
+
+def log_group_url(log_group_arn: ARN) -> str:
+    return f"https://{log_group_arn.region}.console.aws.amazon.com/cloudwatch/home?region={log_group_arn.region}#logsV2:log-groups/log-group/{quote_plus(log_group_arn.resource)}"
 
 
 @access.revoke()
