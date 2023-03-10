@@ -269,11 +269,12 @@ def grant(
     access_instructions = f"""First, log in to your [AWS SSO URL](https://{p.sso_identity_store_id.get()}.awsapps.com/start).
 
 Account ID: {log_group_arn.account}
+
 Role: {request.id}
 
 Once logged in, use the link below to view logs for the log group:
 
-- [{target.log_group}]({url})
+[{target.log_group}]({url})
 """
 
     return access.GrantResult(state=state, access_instructions=access_instructions)
