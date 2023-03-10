@@ -25,8 +25,6 @@ def parse_arn(arn) -> ARN:
         resource=elements[5],
         resource_type=None,
     )
-    if "/" in result.resource:
-        result.resource_type, result.resource = result.resource.split("/", 1)
-    elif ":" in result.resource:
+    if ":" in result.resource:
         result.resource_type, result.resource = result.resource.split(":", 1)
     return result
