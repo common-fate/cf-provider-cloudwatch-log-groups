@@ -97,7 +97,7 @@ This role is used to list CloudWatch log groups to determine the available log g
 
 Deploy this role into the account with the log groups you wish to grant access to:
 
-[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=cf-access-common-fate-cloudwatch-log-groups-cloudwatch-read&templateURL=https://s3.amazonaws.com/my-great-stack.json)
+[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=cf-access-common-fate-cloudwatch-log-groups-cloudwatch-read&templateURL=https://raw.githubusercontent.com/common-fate/cf-provider-cloudwatch-log-groups/main/cloudformation/cloudwatch-read.json)
 
 #### AWS SSO provisioning role
 
@@ -105,7 +105,7 @@ This role allows the Access Provider to create temporary [Permission Sets](https
 
 Deploy this role into either the root account of your AWS organization, or into an account which is given [Delegated Administration](https://docs.aws.amazon.com/singlesignon/latest/userguide/delegated-admin.html) privileges:
 
-[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=cf-access-common-fate-cloudwatch-log-groups-sso&templateURL=https://s3.amazonaws.com/my-great-stack.json)
+[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=cf-access-common-fate-cloudwatch-log-groups-sso&templateURL=https://raw.githubusercontent.com/common-fate/cf-provider-cloudwatch-log-groups/main/cloudformation/sso.json)
 
 ### 2. Deploy the Access Provider
 
