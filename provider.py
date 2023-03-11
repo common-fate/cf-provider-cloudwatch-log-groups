@@ -104,7 +104,7 @@ class LogGroupTarget:
     log_group = target.Resource(
         title="Log Group",
         resource=LogGroup,
-        description="the CloudWatch log group to grant read access to",
+        description="the ARN of the CloudWatch log group to grant read access to",
     )
 
 

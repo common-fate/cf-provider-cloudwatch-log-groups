@@ -1,0 +1,143 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="921px" height="486px" viewBox="-0.5 -0.5 921 486" content="&lt;mxfile&gt;&lt;diagram id=&quot;TNClprXlCA8m20sFr90e&quot; name=&quot;Page-1&quot;&gt;5VhLU9swEP41nmkPMH7JCcc8oL106JAD7VHIwtZU9mZkGSf8+q5sObFjA+00hDJcMtpPq8d++5LjBIts80XRdfoNYi4d3403TrB0fP/CneCvAbYNEJGwARIl4gby9sBKPHILuhYtRcyLnqIGkFqs+yCDPOdM9zCqFFR9tXuQ/VPXNOEDYMWoHKK3ItZpg079yR7/ykWStid70UUzk9FW2VpSpDSGqgMFl06wUAC6GWWbBZeGu5aXZt3VE7O7iyme6z9ZEDQLHqgsrW32XnrbGlulQvPVmjIjV+hPJ5inOpMoeTi8F1IuQIJCOYccleYxLVIe23l7AFeab568pLczHUOGQ8a12qKKXTAlzQobLV5oyav23Ie+1Um7vE+tIrX+TnZb7ynBgWVlnKFoQAiPMRisaC3u8NGoG53nrcUtoVTMalnaNVUJt1pknBPFJdXiob/7vxjoD0JgAVkGOWJXVHOTpnwtYZuZ+/9lcBzB+TtvW+/77tD7XptOXe9HR3B++CI3s9uVOYMxKEfoQbN1nxEqRZLjmKH5HHNmbsgRWFpmdiITcWyWzxUvxCO9q7dyUV6DyHVtC5k7ZGn2KjUUTXE0WxdawS9+kIsj6XmMjOz7xHPJ0CeTEZ8ER/CJR06SkWSYkZ5/opT0ni86oHQKCeRUXu7RrsVol9r+sHFTCz+NcE5acbnpTi63VjoeU8GJmCKDBGV1gp7d1+l5xSSUcUU1S88kJGeJghLfCH4kTVreKRwlZjRjjBeIu98VPODbQr1BoQuCNyx0k/fwDiCTg7Jz0ofAdEDRtUpojjVai7oj3JhX20ftCIQcPNJGoncX0cduCRfvI3on532OwpG2Gfr++WtFcPv51OEJ611cMhvAB5HrfqoEXst3sXLWn2Kmdn7+OBEdHforiIb+8slrPXOG7/LGP6vVtfFV27FuANk7fbeKvDfsVt7ws3VhGv2tafT/ITkheT1yUNz/XVDPdf5zCS5/Aw==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="5" y="40" width="425" height="180" fill="none" stroke="rgb(0, 0, 0)" stroke-dasharray="3 3" pointer-events="all"/>
+        <path d="M 180 130 L 243.63 130" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 248.88 130 L 241.88 133.5 L 243.63 130 L 241.88 126.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="60" y="100" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 130px; margin-left: 61px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Common Fate deployment
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="120" y="134" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Common Fate deployme...
+                </text>
+            </switch>
+        </g>
+        <rect x="0" y="5" width="170" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 20px; margin-left: 85px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;">
+                                Common Fate AWS account
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="85" y="24" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Common Fate AWS account
+                </text>
+            </switch>
+        </g>
+        <path d="M 370 130 L 523.63 130" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 528.88 130 L 521.88 133.5 L 523.63 130 L 521.88 126.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 370 130 L 440 130 Q 450 130 450 140 L 450 370 Q 450 380 460 380 L 523.63 380" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 528.88 380 L 521.88 383.5 L 523.63 380 L 521.88 376.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="250" y="100" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 130px; margin-left: 251px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                common-fate/cloudwatch-log-groups
+                                <br/>
+                                Access Provider
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="310" y="134" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    common-fate/cloudwat...
+                </text>
+            </switch>
+        </g>
+        <rect x="490" y="40" width="425" height="180" fill="none" stroke="rgb(0, 0, 0)" stroke-dasharray="3 3" pointer-events="all"/>
+        <rect x="475" y="0" width="200" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 15px; margin-left: 575px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;">
+                                Organization Root AWS account
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="575" y="19" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Organization Root AWS account
+                </text>
+            </switch>
+        </g>
+        <rect x="497.5" y="305" width="422.5" height="180" fill="none" stroke="rgb(0, 0, 0)" stroke-dasharray="3 3" pointer-events="all"/>
+        <rect x="487.5" y="265" width="250" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 280px; margin-left: 613px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;">
+                                Production AWS account (with log groups)
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="613" y="284" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Production AWS account (with log groups)
+                </text>
+            </switch>
+        </g>
+        <rect x="530" y="100" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 130px; margin-left: 531px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                AWS SSO Access Role
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="590" y="134" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    AWS SSO Access Role
+                </text>
+            </switch>
+        </g>
+        <rect x="530" y="350" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 380px; margin-left: 531px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                CloudWatch Access Role
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="590" y="384" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    CloudWatch Access Ro...
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>
