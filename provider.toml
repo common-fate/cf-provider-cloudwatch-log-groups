@@ -2,3 +2,7 @@ name = "cloudwatch-log-groups"
 publisher = "common-fate"
 version = "v0.2.1"
 language = "python3.9"
+[meta]
+  icon = "cloudwatch"
+  displayName = "Cloudwatch Log Groups"
+  source = "https://github.com/common-fate/cf-provider-cloudwatch-log-groups"
