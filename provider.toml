@@ -4,5 +4,5 @@ version = "v0.3.1"
 language = "python3.9"
 [meta]
   icon = "cloudwatch"
-  displayName = "Cloudwatch Log Groups"
+  display_name = "Cloudwatch Log Groups"
   source = "https://github.com/common-fate/cf-provider-cloudwatch-log-groups"
