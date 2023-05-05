@@ -1,6 +1,6 @@
 name = "cloudwatch-log-groups"
 publisher = "common-fate"
-version = "v0.3.1"
+version = "v0.3.2"
 language = "python3.9"
 [meta]
   icon = "cloudwatch"
