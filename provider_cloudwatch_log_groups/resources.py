@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 import typing
-from commonfate_provider import resources, tasks
+from provider import resources, tasks
 from mypy_boto3_logs.client import CloudWatchLogsClient
 
 from .parse_arn import parse_arn

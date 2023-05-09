@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 import json
 import typing
-from commonfate_provider import (
-    provider,
+import provider
+from provider import (
     target,
     access,
     resources,
