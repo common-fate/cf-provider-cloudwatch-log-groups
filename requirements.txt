@@ -28,4 +28,4 @@ tomli==2.0.1
 types-awscrt==0.16.10
 types-s3transfer==0.6.0.post5
 typing_extensions==4.5.0
-urllib3==1.26.14
+urllib3==1.26.17
